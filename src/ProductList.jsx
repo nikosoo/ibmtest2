@@ -12,20 +12,64 @@ function ProductList() {
   const cartItems = useSelector((state) => state.cart.items); // Retrieve cart items from Redux store
 
   const plantsArray = [
-    // Example plant data (you should replace this with your actual plant data)
     {
       category: "Indoor Plants",
       plants: [
         {
           name: "Fern",
-          description: "A lush green plant",
+          description: "A lush green plant.",
           cost: "$15.00",
-          image: "fern_image_url",
+          image:
+            "https://cdn.britannica.com/30/73130-138-917E422E/Ferns-systems-tracheophytes-leaves-water.jpg?w=800&h=450&c=crop",
         },
-        // more plants...
+        {
+          name: "Snake Plant",
+          description: "A low-maintenance plant with tall, stiff leaves.",
+          cost: "$25.00",
+          image:
+            "https://m.media-amazon.com/images/I/41ZhVEdGAlL._AC_UF1000,1000_QL80_.jpg",
+        },
       ],
     },
-    // more categories...
+    {
+      category: "Outdoor Plants",
+      plants: [
+        {
+          name: "Rose",
+          description:
+            "Beautiful fragrant flowers available in various colors.",
+          cost: "$20.00",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUBPfHrGwTm6OT4eSlaxTI9E_40TP7WbBMFA&s",
+        },
+        {
+          name: "Lavender",
+          description: "Aromatic herb known for its soothing fragrance.",
+          cost: "$10.00",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1GxnilH41ZebC9aBYmGsYBv63rMWqpupz0Q&s",
+        },
+      ],
+    },
+    {
+      category: "Succulents",
+      plants: [
+        {
+          name: "Aloe Vera",
+          description: "A succulent plant known for its medicinal properties.",
+          cost: "$18.00",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaQ-MN7XDfsceIslq87nVt_Ru-WsoITm8rMw&s",
+        },
+        {
+          name: "Echeveria",
+          description: "Attractive rosette-shaped succulent.",
+          cost: "$12.00",
+          image:
+            "https://www.mygarden.com/sites/default/files/styles/achor_navigation_s/public/echeverie-aufmacher-01362307-florapress_0.jpg?h=c3bf4dd4&itok=SMXehLUn",
+        },
+      ],
+    },
   ];
 
   const handleAddToCart = (plant) => {
